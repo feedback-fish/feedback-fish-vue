@@ -1,6 +1,7 @@
 {
   "name": "@feedback-fish/vue",
   "version": "1.0.0",
+  "private": false,
   "description": "Embed the Feedback Fish widget into your Vue site to collect user feedback.",
   "homepage": "https://feedback.fish",
   "bugs": "https://github.com/ruendchengang/feedback-fish-vue/issues",
