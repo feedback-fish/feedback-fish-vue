@@ -8,7 +8,7 @@ export const FeedbackFish = {
         `https://feedback.fish/ff.js?pid=${this.$props.projectId}`
       );
       ffScript.defer = true;
-      document.head.appendChild(ffScript);
+      document.body.appendChild(ffScript);
     });
   },
   props: {
