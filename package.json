@@ -16,8 +16,10 @@
     "build": "microbundle",
     "dev": "microbundle watch"
   },
+  "dependencies": {},
   "devDependencies": {
-    "microbundle": "^0.12.3"
+    "microbundle": "^0.12.3",
+    "prettier": "2.1.2"
   },
   "peerDependencies": {
     "vue": "^2.0.0 || >3.0.0-alpha.1"
