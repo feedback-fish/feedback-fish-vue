@@ -12,9 +12,10 @@ export const FeedbackFish = {
     })
   },
   props: {
-    projectId: String,
+    projectId: {
+      type: String,
+      required: true,
+    },
   },
-  render: function () {
-    return null
-  },
+  render: () => null,
 }
