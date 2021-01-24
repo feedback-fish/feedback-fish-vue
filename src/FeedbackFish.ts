@@ -1,21 +1,21 @@
+import { onMounted } from 'vue'
+
 export const FeedbackFish = {
-  mounted() {
-    // Inject script in $nextTick to make sure the entire app has mounted
-    this.$nextTick(() => {
-      const ffScript = document.createElement("script")
+  props: {
+    projectId: String
+  },
+  setup(props: { projectId: string; }) {
+    onMounted(() => {
+      const ffScript = document.createElement("script");
       ffScript.setAttribute(
         "src",
-        `https://feedback.fish/ff.js?pid=${this.$props.projectId}`
-      )
-      ffScript.defer = true
-      document.body.appendChild(ffScript)
+        `https://feedback.fish/ff.js?pid=${props.projectId}`
+      );
+      ffScript.defer = true;
+      document.head.appendChild(ffScript);
     })
   },
-  props: {
-    projectId: {
-      type: String,
-      required: true,
-    },
-  },
-  render: () => null,
+  render() {
+    return null
+  }
 }
